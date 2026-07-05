@@ -5,6 +5,12 @@ const express = require("express");
 const app = express();
 
 app.get("/api/notes",(req,res)=>{
+    // delete  a note
+    res.send("You got 5 notes");
+});
+
+app.get("/api/notes",(req,res)=>{
+    // create   a note
     res.send("You got 5 notes");
 });
 
