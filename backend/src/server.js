@@ -5,6 +5,7 @@ import notesRoutes from "./routes/notesRoutes.js";
 
 // const express = require("express");
 const app = express();
+
 const PORT = process.env.PORT || 5001;
 
 app.use("/api/notes", notesRoutes);
