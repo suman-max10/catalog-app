@@ -12,7 +12,7 @@ const app = express();
 connectDB();
 
 //middleware
-app.use(express.json())
+app.use(express.json());
 
 
 const PORT = process.env.PORT || 5001;
