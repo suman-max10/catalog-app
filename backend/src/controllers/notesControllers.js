@@ -63,6 +63,8 @@ export async function updateANotes(req, res) {
   }
 }
 
+
+
 export async function deleteANotes(req, res) {
   try {
     const deletedNote = await Note.findByIdAndDelete(req.params.id);
