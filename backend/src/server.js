@@ -11,7 +11,19 @@ dotenv.config();
 const app = express();
 connectDB();
 
-//middleware
+// middleware 
+app.use(express.json());
+
+app.use((req,res,next)=>{
+  console.log(`Req method is ${req.method} & Req URL is ${req.url}`);
+  next();
+});
+
+
+
+
+
+
 app.use(express.json());
 
 
@@ -22,3 +34,5 @@ app.use("/api/notes", notesRoutes);
 app.listen(PORT, () => {
   console.log(`Server started on PORT: ${PORT}`);
 });
+
+
