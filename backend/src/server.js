@@ -12,6 +12,7 @@ const app = express();
 connectDB();
 
 // middleware 
+
 app.use(express.json());
 
 app.use((req,res,next)=>{
