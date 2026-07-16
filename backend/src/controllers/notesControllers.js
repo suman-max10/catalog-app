@@ -23,6 +23,7 @@ export async function createANotes(req, res) {
     console.error("Error in create note controller", error);
     res.status(500).json({ message: "Internal Server error" });
   }
+  
 }
 
 export async function getNoteById(req,res){
