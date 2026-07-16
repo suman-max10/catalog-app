@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 // crewat a schemas
+
 // model based off that svhema
 
 const noteScheme = new mongoose.Schema({
