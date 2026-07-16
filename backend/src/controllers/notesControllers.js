@@ -30,7 +30,6 @@ export async function createANotes(req, res) {
 }
 
 
-NavigationPrecommitController.
 
 export async function getNoteById(req,res){
   try {
