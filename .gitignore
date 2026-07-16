@@ -13,6 +13,11 @@ dist/
 build/
 .next/
 out/
+.vite/
+dist-ssr/
+
+# Frontend environment files
+*.local
 
 # IDE and editor
 .vscode/
