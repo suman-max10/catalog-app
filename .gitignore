@@ -7,6 +7,7 @@ yarn.lock
 .env
 .env.local
 .env.*.local
+.env*.production
 
 # Build and dist folders
 dist/
@@ -26,13 +27,37 @@ dist-ssr/
 *.swo
 *.sublime-workspace
 .DS_Store
+Thumbs.db
 
 # Logs
 logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# Temporary files
+# Testing
+coverage/
+.nyc_output/
+
+# Cache and temporary files
 *.tmp
 .cache/
+.eslintcache
+.node_repl_history
+
+# OS specific
+*.pem
+.AppleDouble
+.LSOverride
+
+# IDE specific
+.vscode/extensions/
+.idea/misc.xml
+*.iml
+
+# Upstash/Database related
+.upstash
+*.db
+*.sqlite
