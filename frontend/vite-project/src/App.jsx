@@ -7,7 +7,7 @@ import CreatePage from "./pages/CreatePage";
 import NoteDetailPage from "./pages/NoteDetailPage";
 const App = () => {
   return (
-    <div>
+    <div className='min-h-screen p-7'>
       <button className='btn'>Button</button>
       <button className='btn btn-neutral'>Neutral</button>
       <button className='btn btn-primary'>Primary</button>
