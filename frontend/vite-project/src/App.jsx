@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div>
 
-      <button onClick={() => toast.success("Congrats")}>Click Me</button>
+      <button onClick={() => toast.success("Congrats")} className="text-red-500 p-4">Click Me</button>
       <Toaster />
     <Routes>
       <Route path='/' element={<HomePage />} />
