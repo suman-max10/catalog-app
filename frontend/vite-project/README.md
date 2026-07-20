@@ -18,3 +18,8 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 # the catalog app has 4 main features
+
+-> create 
+-> view
+-> delete
+-> update
