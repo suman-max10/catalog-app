@@ -6,20 +6,25 @@ import RateLimitedUI from "../components/RateLimitedUI";
 import axios from "axios"
 const HomePage = () => {
 
-  const [isRateLimited, setIsRateLimited] = useState(true);
-  const[notes,setnotes] = useState([])
-  const[loading,setLoading] = useState(true);
+  const [isRateLimited, setIsRateLimited] = useState(false);
+  const [notes, setNotes] = useState([]);
+  const [loading, setLoading] = useState(true);
  
   useEffect(() => {
     const fetchNotes =  async() => {
     try{
-      
-      const res = await axios.post("http://localhost:5001/api/notes")
-     
-      console.log(res.data);
 
+      const res = await axios.get("/api/notes")
+      setNotes(res.data);
+     
     }catch(error){
-      console.log("Error featching notes");
+      if (error.response?.status === 429) {
+        setIsRateLimited(true);
+        return;
+      }
+      console.log("Error fetching notes");
+    } finally {
+      setLoading(false);
     }
     };
     fetchNotes();
