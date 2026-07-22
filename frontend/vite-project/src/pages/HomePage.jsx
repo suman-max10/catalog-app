@@ -13,6 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchNotes =  async() => {
     try{
+      
       const res = await axios.post("http://localhost:5001/api/notes")
      
       console.log(res.data);
