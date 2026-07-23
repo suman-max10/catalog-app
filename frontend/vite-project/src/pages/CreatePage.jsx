@@ -26,7 +26,9 @@ const CreatePage = () => {
 
     try {
       setLoading(true);
-      await axios.post("/notes", { title, content });
+      // await api.post("/notes", { title, content });// api style both are working.
+      await axios.post("http://localhost:5001/api/notes", { title, content }); // axios style both are working.
+
       toast.success("Note created successfully");
       setTitle("");
       setContent("");
