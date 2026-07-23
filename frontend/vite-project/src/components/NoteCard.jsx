@@ -7,8 +7,9 @@ import api from "../lib/axios";
 import toast from "react-hot-toast";
 
 const NoteCard = ({ note, setNotes }) => {
+  
   const handleDelete = async (e, id) => {
-    
+
     e.preventDefault(); // get rid of the navigation behaviour
 
     if (!window.confirm("Are you sure you want to delete this note?")) return;
